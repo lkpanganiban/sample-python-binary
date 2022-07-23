@@ -1,12 +1,14 @@
+from sample_python_binary.modules.greeting_printer import GreetingPrinter
 import fire
 
 class ExecutionCLI:
     def __init__(self):
-        self.name = "Sample Python Binary CLI"
-        self.version = "0.1"
+        self.name: str = "Sample Python Binary CLI"
+        self.version: float = 0.1
     
-    def execution_1(self, x=None):
-        print(x)
+    def print_greeting(self, greeting: str=None):
+        greeting_printer = GreetingPrinter()
+        print(greeting_printer._print_greeting(greeting))
 
 def main():
   executioncli = ExecutionCLI()
