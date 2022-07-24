@@ -19,3 +19,4 @@ How to package a Python program using Pyinstaller
     ```
     python -m nuitka binary.py
     ```
+2. More [info](https://github.com/Nuitka/Nuitka)
