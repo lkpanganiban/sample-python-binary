@@ -1,10 +1,12 @@
 import os
+from sample_python_binary.modules.utils.exec_timer import exec_time
 from sample_python_binary.modules.file_indexer.query import FileQuery
 
 class FileIndexerAction:
     def __init__(self):
         self.file_query: FileQuery = FileQuery()
     
+    @exec_time
     def _index_directory(self, directory_path: str) -> str:
         count: int = 0
         print(f"indexing {directory_path}")
@@ -18,7 +20,7 @@ class FileIndexerAction:
                 file_obj["file_type"] = self._get_file_type(full_location)
                 self.file_query._store_files(file_obj)
                 count += 1
-        return f"indexed {directory_path} with {str(count)}"
+        return f"indexed {directory_path} with {str(count)} files"
 
     def _get_file_type(self, file_path: str) -> str:
         try:

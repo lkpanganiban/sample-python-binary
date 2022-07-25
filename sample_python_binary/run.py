@@ -14,7 +14,7 @@ class ExecutionCLI:
 
     def index_directory(self, directory_path: str):
         file_index_action = FileIndexerAction()
-        file_index_action._index_directory(directory_path)
+        print(file_index_action._index_directory(directory_path))
 
 def main():
     executioncli = ExecutionCLI()

@@ -8,7 +8,7 @@ setup(
     author="Ian Panganiban",
     author_email="lkp@noypimaps.com",
     packages=find_packages(),
-    entry_points={"console_scripts": ["pipeline=sample_python_binary.run:main"]},
+    entry_points={"console_scripts": ["binary-exec=sample_python_binary.run:main"]},
     install_requires=[
         "fire",
         "pyinstaller",
