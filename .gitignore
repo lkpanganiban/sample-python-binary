@@ -5,5 +5,5 @@ build/*
 env
 __pycache__
 *.db
-binary.build
+sample_binary.build
 *.bin

@@ -17,6 +17,6 @@ How to package a Python program using Pyinstaller
 ## Compiling with Nuitka
 1. Execute the following to compile with Nuitka:
     ```
-    python -m nuitka binary.py
+    env/bin/python -m nuitka binary.py
     ```
 2. More [info](https://github.com/Nuitka/Nuitka)
