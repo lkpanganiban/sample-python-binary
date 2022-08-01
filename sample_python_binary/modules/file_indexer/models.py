@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Float
-from sample_python_binary.modules.settings import Engine, Base
+from sample_python_binary.modules.settings import ENGINE, BASE
 
-class Files(Base):
+class Files(BASE):
     __tablename__ = 'files'
    
     id = Column(Integer, primary_key = True)
@@ -10,4 +10,4 @@ class Files(Base):
     location = Column(String)
     file_size = Column(Float)
 
-Base.metadata.create_all(Engine)
+BASE.metadata.create_all(ENGINE)

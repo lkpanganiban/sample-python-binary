@@ -1,5 +1,6 @@
 from sample_python_binary.modules.greeting_printer.greeting_printer import GreetingPrinter
 from sample_python_binary.modules.file_indexer.actions import FileIndexerAction
+from sample_python_binary.modules.utils.license_checker import _check_license
 import fire
 
 
@@ -17,5 +18,8 @@ class ExecutionCLI:
         print(file_index_action._index_directory(directory_path))
 
 def main():
+    print("checking license...")
+    if not _check_license():
+        return "You have invalid license"
     executioncli = ExecutionCLI()
     fire.Fire(executioncli)

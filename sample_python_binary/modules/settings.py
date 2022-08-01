@@ -4,6 +4,10 @@ from sqlalchemy.ext.declarative import declarative_base
 
 DB_NAME = os.environ.get("DB_NAME", "SAMPLEDB")
 
-Engine = create_engine(f'sqlite:///{DB_NAME}.db', echo = False)
+ENGINE = create_engine(f'sqlite:///{DB_NAME}.db', echo = False)
 
-Base = declarative_base()
+BASE = declarative_base()
+
+LICENSE_KEY = b'0DN2bmDyBUXUCM7gtbqRxCHBgMZw3aFN35jCEcITFCE='
+
+LICENSE_FILE = os.environ.get("LICENSE_FILE", "sample_license")

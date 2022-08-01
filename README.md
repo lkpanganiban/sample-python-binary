@@ -1,10 +1,12 @@
 # Sample Python Binary
 How to package a Python program using Pyinstaller
 
-## Requirements
+## Requirements (Development)
 - Python 3.8+
 - Pyinstaller
+- Nuitka
 - Fire
+- Fernet
 
 ## Compiling with Pyinstaller
 1. How to Compile: The `binary.py` act as the entrypoint for Pyinstaller.

@@ -1,6 +1,8 @@
 altgraph==0.17.2
 black==22.6.0
+cffi==1.15.1
 click==8.1.3
+cryptography==37.0.4
 fire==0.4.0
 greenlet==1.1.2
 mypy-extensions==0.4.3
@@ -8,10 +10,11 @@ Nuitka==0.9.6
 numpy==1.23.1
 pathspec==0.9.0
 platformdirs==2.5.2
+pyaes==1.6.1
 pyarmor==7.5.1
+pycparser==2.21
 pyinstaller==5.2
 pyinstaller-hooks-contrib==2022.8
--e git+git@github.com:lkpanganiban/sample-python-binary.git@5ca49ea9763cd0f822e1fd30d04508abed0ded13#egg=sample_python_binary
 six==1.16.0
 SQLAlchemy==1.4.39
 termcolor==1.1.0
