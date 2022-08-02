@@ -22,3 +22,6 @@ How to package a Python program using Pyinstaller
     env/bin/python -m nuitka binary.py
     ```
 2. More [info](https://github.com/Nuitka/Nuitka)
+
+## License File
+The license file which is the `sample_license` contains the `LICENSE_EXPIRY` key. This uses a binary string under the `modules/settings.py` to decrypt the license file. The encryption and decryption is done using the `cryptography` library.  

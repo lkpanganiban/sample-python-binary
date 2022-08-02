@@ -1,7 +1,7 @@
 import json
 from datetime import datetime
 from cryptography.fernet import Fernet
-from sample_python_binary.modules.settings import LICENSE_KEY, LICENSE_FILE
+from sample_python_binary.modules.settings import LICENSE_KEY, LICENSE_FILE, DEBUG
 
 
 def _decrypt_message(encrypted_message):
@@ -24,12 +24,14 @@ def _read_license(license_file: str):
 def _check_expiry(license_expiry: datetime) -> bool:
     try:
         date_time_obj = datetime.strptime(license_expiry["LICENSE_EXPIRY"], '%Y/%m/%d')
-        delta = date_time_obj - datetime.now()
-        if delta.days >= 0:
-            return True
-        else:
-            return False
     except:
+        if DEBUG:
+            print("Missing LICENSE_EXPIRY in license file.")
+        return False
+    delta = date_time_obj - datetime.now()
+    if delta.days >= 0:
+        return True
+    else:
         return False
 
 def _check_license() -> bool:
