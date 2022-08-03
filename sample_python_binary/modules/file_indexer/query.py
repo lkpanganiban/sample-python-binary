@@ -16,6 +16,7 @@ class FileQuery:
             uid = uid,
             file_name = file_object.get('name'),
             file_size = float(file_object.get('file_size')),
+            file_type = file_object.get("file_type"),
             location = file_object.get('location')
         )
         self.session.add(s1)

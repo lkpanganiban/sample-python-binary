@@ -11,6 +11,7 @@ ENGINE = create_engine(f'sqlite:///{DB_NAME}.db', echo = False)
 
 BASE = declarative_base()
 
+# The license key is a bytes string type used for decryption - don't remove the 'b'
 LICENSE_KEY = b'0DN2bmDyBUXUCM7gtbqRxCHBgMZw3aFN35jCEcITFCE='
 
 LICENSE_FILE = os.environ.get("LICENSE_FILE", "sample_license")
