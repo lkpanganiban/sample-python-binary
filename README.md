@@ -30,7 +30,7 @@ python -m unittest
 ```
 
 ## Usage
-After creating the binary, it requires a `sample_license` file.
+After creating the binary, it requires a `sample_license` file. A sample is found under `data_dir/sample_license`.
 - Index Directory
     ```
     binary-exec index-directory <directory-path>
