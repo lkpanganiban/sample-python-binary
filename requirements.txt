@@ -13,8 +13,6 @@ platformdirs==2.5.2
 pyaes==1.6.1
 pyarmor==7.5.1
 pycparser==2.21
-pyinstaller==5.2
-pyinstaller-hooks-contrib==2022.8
 six==1.16.0
 SQLAlchemy==1.4.39
 termcolor==1.1.0

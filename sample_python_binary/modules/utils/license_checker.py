@@ -1,17 +1,18 @@
 import json
 from datetime import datetime
+from typing import Dict
 from cryptography.fernet import Fernet
 from sample_python_binary.modules.settings import LICENSE_KEY, LICENSE_FILE, DEBUG
 
 
-def _decrypt_message(encrypted_message):
+def _decrypt_message(encrypted_message) -> bytes:
     """
     Decrypts an encrypted message
     """
     f = Fernet(LICENSE_KEY)
     return f.decrypt(encrypted_message)
 
-def _read_license(license_file: str):
+def _read_license(license_file: str) -> Dict:
     """
     Reads the license file
     """

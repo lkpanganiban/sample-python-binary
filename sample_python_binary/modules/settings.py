@@ -15,3 +15,5 @@ BASE = declarative_base()
 LICENSE_KEY = b'0DN2bmDyBUXUCM7gtbqRxCHBgMZw3aFN35jCEcITFCE='
 
 LICENSE_FILE = os.environ.get("LICENSE_FILE", "sample_license")
+
+MODEL_LOCATION = "data_dir/ml_model.txt"

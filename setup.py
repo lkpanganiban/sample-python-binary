@@ -11,7 +11,6 @@ setup(
     entry_points={"console_scripts": ["binary-exec=sample_python_binary.run:main"]},
     install_requires=[
         "fire",
-        "pyinstaller",
         "nuitka",
         "numpy",
     ],
