@@ -3,17 +3,23 @@ This is a sample python binary which contains different implementations of commo
 
 ## Requirements (Development)
 - Python 3.8+
-- Pyinstaller
 - Nuitka
 - Fire
 - Fernet
 
 ## Compiling with Nuitka
-1. Execute the following to compile with Nuitka:
+### Accelerated Mode
+- Execute the following to compile with [Nuitka](https://github.com/Nuitka/Nuitka):
     ```
     env/bin/python -m nuitka binary.py
     ```
-2. More [info](https://github.com/Nuitka/Nuitka)
+
+### For Distribution (One File)
+- Run the build script `build.sh`
+    ```
+    bash build.sh
+    ```
+    Modify the `build.sh` if you encounter any issues on your dependencies.
 
 ## License File
 The license file which is the `sample_license` contains the `LICENSE_EXPIRY` key. This uses a binary string under the `modules/settings.py` to decrypt the license file. The encryption and decryption is done using the `cryptography` library.
