@@ -5,19 +5,19 @@ from sample_python_binary.modules.file_indexer.models import Files
 
 class FileQuery:
     def __init__(self):
-        self.name: str = "File Query"
-        self.files: Files = Files()
+        self.name = "File Query"
+        self.files = Files()
         Session = sessionmaker(bind=ENGINE)
         self.session = Session()
 
     def _store_files(self, file_object: dict = None) -> Files:
         uid = uuid.uuid4().hex
-        s1 = Files(
+        f1 = Files(
             uid = uid,
             file_name = file_object.get('name'),
             file_size = float(file_object.get('file_size')),
             file_type = file_object.get("file_type"),
             location = file_object.get('location')
         )
-        self.session.add(s1)
+        self.session.add(f1)
         self.session.commit()

@@ -18,6 +18,10 @@ This is a sample python binary which contains different implementations of commo
 ## License File
 The license file which is the `sample_license` contains the `LICENSE_EXPIRY` key. This uses a binary string under the `modules/settings.py` to decrypt the license file. The encryption and decryption is done using the `cryptography` library.
 
+## Running Test
+```
+python -m unittest
+```
 
 ## Usage
 After creating the binary, it requires a `sample_license` file.
