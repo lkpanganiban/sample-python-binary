@@ -22,7 +22,7 @@ This is a sample python binary which contains different implementations of commo
     Modify the `build.sh` if you encounter any issues on your dependencies.
 
 ## License File
-The license file which is the `sample_license` contains the `LICENSE_EXPIRY` key. This uses a binary string under the `modules/settings.py` to decrypt the license file. The encryption and decryption is done using the `cryptography` library.
+The license file which is the `data_dir/sample_license` contains an encrypted `LICENSE_EXPIRY`. This uses a binary string under the `modules/settings.py` to decrypt the contents of the license file. The encryption and decryption is done using the `cryptography` library. Refer to this [repo](https://github.com/lkpanganiban/license-generator-toolbox) on how to generate a license file.
 
 ## Running Test
 ```
