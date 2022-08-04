@@ -20,7 +20,7 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-RUN python3.9 -m nuitka --onefile \
+RUN python3.9 -m nuitka --standalone \
                          --include-module=sqlalchemy.sql.default_comparator \
                          --include-data-files=data_dir/ml_model.txt=data_dir/ \
                          --include-data-files=data_dir/sample_license=data_dir/ \

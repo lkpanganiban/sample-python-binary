@@ -30,8 +30,6 @@ python -m unittest
     ```
     docker build -t sample_python_binary .
     ```
-    Modify the `build.sh` if you encounter any issues on your dependencies.
-
 ##### Onefile Binary
 - Run the following command to build with Onefile.
     ```
