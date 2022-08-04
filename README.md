@@ -5,31 +5,38 @@ This is a sample python binary which contains different implementations of commo
 - Python 3.8+
 - Nuitka
 - Fire
-- Fernet
+- Cryptography
 
-## Compiling with Nuitka
-### Accelerated Mode
+## Developers
+### Models and Other Configs
+ML model files can be placed inside the `data_dir` directory. This folder can also be used as a container for other static binaries that you need to use in your code. 
+### Settings File
+The `settings.py` is located under `sample_python_binary/modules/`. You can configure the parameters and constants inside this file but it is recommended to use the environment variables to configure or modify this file instead of hardcoding the values.
+
+### Compiling with Nuitka
+#### Accelerated Mode
 - Execute the following to compile with [Nuitka](https://github.com/Nuitka/Nuitka):
     ```
-    env/bin/python -m nuitka binary.py
+    env/bin/python -m nuitka binary.py # if you're using a virtual environment
     ```
 
-### For Distribution (One File)
+#### For Distribution (One File)
 - Run the build script `build.sh`
     ```
     bash build.sh
     ```
     Modify the `build.sh` if you encounter any issues on your dependencies.
 
-## License File
-The license file which is the `data_dir/sample_license` contains an encrypted `LICENSE_EXPIRY`. This uses a binary string under the `modules/settings.py` to decrypt the contents of the license file. The encryption and decryption is done using the `cryptography` library. Refer to this [repo](https://github.com/lkpanganiban/license-generator-toolbox) on how to generate a license file.
-
-## Running Test
+### Running Tests
 ```
 python -m unittest
 ```
 
 ## Usage
+### License File
+The license file which is the `data_dir/sample_license` contains an encrypted `LICENSE_EXPIRY`. This uses a binary string under the `modules/settings.py` to decrypt the contents of the license file. The encryption and decryption is done using the `cryptography` library. Refer to this [repo](https://github.com/lkpanganiban/license-generator-toolbox) on how to generate a license file.
+
+### CLI Usage
 After creating the binary, it requires a `sample_license` file. A sample is found under `data_dir/sample_license`.
 - Index Directory
     ```
