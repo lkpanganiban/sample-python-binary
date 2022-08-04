@@ -30,5 +30,5 @@ RUN python3.9 -m nuitka --standalone \
 
 FROM  debian:bullseye-slim as runtime-image
 COPY --from=build-image /var/app/sample_binary.dist sample_binary.dist/
-COPY --from=build-image /var/app/data_dir/sample_license .
+COPY --from=build-image /var/app/data_dir/sample_license sample_binary.dist/sample_license
 CMD ["./sample_binary.dist/sample_binary version"]

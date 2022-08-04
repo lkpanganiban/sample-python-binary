@@ -54,3 +54,9 @@ After creating the binary, it requires a `sample_license` file. A sample is foun
     ```
     binary-exec index-directory <directory-path>
     ```
+
+#### Docker Run Execution
+- Example: Index Directory
+    ```
+    docker container run -e "DB_NAME=/sample_binary.dist/workdir/OUTPUT_DB" -v $(pwd):/sample_binary.dist/workdir -v $(pwd)/files:/sample_binary.dist/files sample_python_binary ./sample_binary.dist/sample_binary index-directory ./sample_binary.dist/files
+    ```
