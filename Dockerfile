@@ -28,7 +28,7 @@ RUN python3.9 -m nuitka --onefile \
                          --linux-onefile-icon=data_dir/python3.xpm \
                          sample_binary.py
 
-FROM  debian:bullseye-slim AS runtime-image
+FROM  debian:bullseye-slim as runtime-image
 COPY --from=build-image /var/app/sample_binary.dist sample_binary.dist/
 COPY --from=build-image /var/app/data_dir/sample_license .
 CMD ["./sample_binary version"]
