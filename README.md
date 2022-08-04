@@ -13,24 +13,32 @@ ML model files can be placed inside the `data_dir` directory. This folder can al
 ### Settings File
 The `settings.py` is located under `sample_python_binary/modules/`. You can configure the parameters and constants inside this file but it is recommended to use the environment variables to configure or modify this file instead of hardcoding the values.
 
-### Compiling with Nuitka
+### Running Tests
+```
+python -m unittest
+```
+
+### Compiling
 #### Accelerated Mode
 - Execute the following to compile with [Nuitka](https://github.com/Nuitka/Nuitka):
     ```
     env/bin/python -m nuitka binary.py # if you're using a virtual environment
     ```
+#### For Distribution
+##### Standalone packaged with Docker
+- Run the build script `build.sh` The generated standalone dist folder also works with Docker
+    ```
+    docker build -t sample_python_binary .
+    ```
+    Modify the `build.sh` if you encounter any issues on your dependencies.
 
-#### For Distribution (One File)
-- Run the build script `build.sh`
+##### Onefile Binary
+- Run the following command to build with Onefile.
     ```
     bash build.sh
     ```
     Modify the `build.sh` if you encounter any issues on your dependencies.
 
-### Running Tests
-```
-python -m unittest
-```
 
 ## Usage
 ### License File

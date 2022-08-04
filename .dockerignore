@@ -1,0 +1,7 @@
+.vscode
+env/
+sample_binary.build/
+sample_binary.dist/
+sample_python_binary.egg-info/
+sample_license
+*.db

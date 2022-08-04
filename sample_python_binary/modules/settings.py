@@ -3,7 +3,7 @@ from distutils.util import strtobool
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
-DEBUG = strtobool(os.environ.get("DEBUG", "False"))
+DEBUG = strtobool(os.environ.get("DEBUG", "True"))
 
 DB_NAME = os.environ.get("DB_NAME", "SAMPLEDB")
 

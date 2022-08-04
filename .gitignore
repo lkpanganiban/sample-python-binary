@@ -8,3 +8,4 @@ __pycache__
 sample_binary.build
 sample_binary.dist/
 *.bin
+sample_license
