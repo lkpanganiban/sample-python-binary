@@ -39,6 +39,12 @@ python -m unittest
 
 
 ## Usage
+### Parameters
+You can set the environment variables of the following parameters:
+- DEBUG: True or False
+- DB_Name: Name of output Database
+- LICENSE_FILE: Location of the license file
+
 ### License File
 The license file which is the `data_dir/sample_license` contains an encrypted `LICENSE_EXPIRY`. This uses a binary string under the `modules/settings.py` to decrypt the contents of the license file. The encryption and decryption is done using the `cryptography` library. Refer to this [repo](https://github.com/lkpanganiban/license-generator-toolbox) on how to generate a license file.
 
