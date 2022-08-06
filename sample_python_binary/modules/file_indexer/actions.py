@@ -59,7 +59,6 @@ class FileIndexerAction:
         print(f"indexing {directory_path}")
         file_list = self._build_files_list(directory_path)
         count = len(file_list)
-        pool = multiprocessing.Pool()
         pool = multiprocessing.Pool(processes=os.cpu_count())
         outputs = pool.map(self._process_data, file_list)
         return f"indexed {directory_path} with {str(count)} files"

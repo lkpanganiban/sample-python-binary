@@ -58,6 +58,10 @@ After creating the binary, it requires a `sample_license` file. A sample is foun
     ```
     binary-exec index-directory-parallel <directory-path>
     ```
+- Thumbnail Generator
+    ```
+    binary-exec generate-thumbnails <image-directory> <output-thumbnail-directory>
+    ```
 #### Docker Run Execution
 - Example: Index Directory
     ```

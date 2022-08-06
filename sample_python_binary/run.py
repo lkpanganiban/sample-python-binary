@@ -1,5 +1,6 @@
 from sample_python_binary.modules.greeting_printer.greeting_printer import GreetingPrinter
 from sample_python_binary.modules.file_indexer.actions import FileIndexerAction
+from sample_python_binary.modules.thumbnail_generator.generate_thumbnails import ThumbnailGenerator
 from sample_python_binary.modules.utils.license_checker import _check_license
 from sample_python_binary.modules.utils.read_models import ModelReader
 from sample_python_binary.modules.settings import DEBUG
@@ -26,6 +27,10 @@ class ExecutionCLI:
     def read_model_file(self, model_path: str = None):
         model_reader = ModelReader(model_path)
         model_reader._read_model_file()
+
+    def generate_thumbnails(self, image_directory: str, thumbnail_directory: str="thumbnails"):
+        thumb_generator = ThumbnailGenerator(image_directory, thumbnail_directory)
+        thumb_generator.generate_thumbnails_from_dir()
 
 def main():
     if DEBUG:
