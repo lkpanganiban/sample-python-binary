@@ -12,12 +12,13 @@ class FileQuery:
 
     def _store_files(self, file_object: dict = None) -> Files:
         uid = uuid.uuid4().hex
-        f1 = Files(
+        f = Files(
             uid = uid,
             file_name = file_object.get('name'),
             file_size = float(file_object.get('file_size')),
             file_type = file_object.get("file_type"),
             location = file_object.get('location')
         )
-        self.session.add(f1)
+        self.session.add(f)
         self.session.commit()
+        return f
