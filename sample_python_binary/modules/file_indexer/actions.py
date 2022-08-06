@@ -61,4 +61,5 @@ class FileIndexerAction:
         count = len(file_list)
         pool = multiprocessing.Pool(processes=os.cpu_count())
         outputs = pool.map(self._process_data, file_list)
+        pool.close()
         return f"indexed {directory_path} with {str(count)} files"

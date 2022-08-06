@@ -15,9 +15,9 @@ class TestFileIndexer(unittest.TestCase):
         self.session = Session()
 
     def test_index_directory(self):
-        self.file_indexer._index_directory(self.location_dir)
+        self.file_indexer.index_directory(self.location_dir)
         file_count = len(self.session.query(Files).all())
-        self.assertEqual(file_count, 2)
+        self.assertEqual(file_count, 16)
 
 
 if __name__ == '__main__':

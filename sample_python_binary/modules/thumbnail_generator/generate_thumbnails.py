@@ -39,6 +39,7 @@ class ThumbnailGenerator:
         try:
             pool = multiprocessing.Pool(processes=os.cpu_count())
             pool.map(self._generate_thumbnails, image_list)
+            pool.close()
             return True
         except:
             return False
