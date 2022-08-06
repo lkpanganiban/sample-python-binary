@@ -17,7 +17,11 @@ class ExecutionCLI:
 
     def index_directory(self, directory_path: str):
         file_index_action = FileIndexerAction()
-        print(file_index_action._index_directory(directory_path))
+        print(file_index_action.index_directory(directory_path))
+
+    def index_directory_parallel(self, directory_path: str):
+        file_index_action = FileIndexerAction()
+        print(file_index_action.index_directory_parallel(directory_path))
 
     def read_model_file(self, model_path: str = None):
         model_reader = ModelReader(model_path)
